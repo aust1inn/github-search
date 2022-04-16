@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +12,7 @@ import { GithubReposComponent } from './components/github-repos/github-repos.com
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { GithubProfileCardComponent } from './components/github-profile-card/github-profile-card.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,11 +21,14 @@ import { GithubProfileCardComponent } from './components/github-profile-card/git
     GithubProfileDataComponent,
     GithubReposComponent,
     NavbarComponent,
-    GithubProfileCardComponent
+    GithubProfileCardComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
