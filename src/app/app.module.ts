@@ -8,6 +8,9 @@ import { AppComponent } from './app.component';
 import { GithubProfileComponent } from './components/github-profile/github-profile.component';
 import { GithubReposComponent } from './components/github-repos/github-repos.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { GithubAppComponent } from './components/github-app/github-app.component';
+import { GithubProfileDataComponent } from './components/github-profile-data/github-profile-data.component';
+import { GithubProfileCardComponent } from './components/github-profile-card/github-profile-card.component';
 
 
 @NgModule({
@@ -16,6 +19,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     GithubProfileComponent,
     GithubReposComponent,
     NavbarComponent,
+    GithubAppComponent,
+    GithubProfileDataComponent,
+    GithubProfileCardComponent,
     
     
   ],
