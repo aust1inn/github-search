@@ -26,16 +26,14 @@ export class GithubAppComponent implements OnInit {
     this.githubService.getProfile(this.namePassed);
     this.user = this.githubService.user
 
-    // this.githubRepos=this.githubService.repo_items;
-    // this.githubRepos.push(this.githubService.repo_items)
 
-    // console.log(this.githubRepos)
     this.githubService.getRepos(this.namePassed);
 
-    console.log(this.githubService.repo_items)
   }
 
   ngOnInit(): void {
+    this.githubRepos=this.githubService.repo_items;
+    console.log(this.githubService.repo_items)
 
   }
 

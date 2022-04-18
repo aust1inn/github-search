@@ -82,8 +82,9 @@ export class GithubServiceService {
      let myPromise = new Promise((resolve:any,reject:any)=>{
       this.http.get<ApiResponse>(dataUrl).toPromise().then((response:any)=>{
        
-        this.repo_items=response;
+        this.repo_items=response.items
         console.log(this.repo_items)
+  
 
         resolve()
       },
@@ -98,7 +99,7 @@ export class GithubServiceService {
   }
   
 
-
+  
 
   //  `https://api.github.com/users/${namePassed}?access_token=${environment.githubApi}`
   // `https://api.github.com/users/${searchQuery}/repos?access_token=${environment.githubApi}`
