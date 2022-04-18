@@ -1,6 +1,7 @@
 import { GithubServiceService } from './../../services/github-service.service';
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user';
+import { Repository } from 'src/app/models/repository';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -12,37 +13,21 @@ export class GithubAppComponent implements OnInit {
 
 
   public namePassed!:string;
-  public githubProfile:any;
-  public githubRepos!:any[];
-  public errorMessage!:string;
   user!:User
+  githubRepos!:any
 
   constructor(private githubService:GithubServiceService ) { }
 
   searchUser () {
-    // to get the github user profile
-
-    // this.githubService.getProfile(this.namePassed).subscribe(data => {
-    //   this.githubProfile= data
-    // },
-    // (error) => {
-    //   this.errorMessage = error
-    // }
-    // )
-
-    // // to get the repository
-    // this.githubService.getRepos(this.namePassed).subscribe(data => {
-    //   this.githubProfile= data
-    // },
-    // (error) => {
-    //   this.errorMessage = error
-    // }
-    // )
-    // console.log(this.githubRepos)
+    
 
     this.githubService.getProfile(this.namePassed);
     this.user = this.githubService.user
 
+    this.githubService.getRepos(this.namePassed);
+    this.githubRepos=this.githubService.repo_items;
+
+    console.log(this.githubRepos)
     console.log(this.user)
   }
 

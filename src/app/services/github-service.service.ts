@@ -19,11 +19,12 @@ import { observable } from 'rxjs';
 export class GithubServiceService {
 
   user!:User
-  repos!:Repository[]
+  repository:Repository
+  repo_items:any
   
   constructor (private http:HttpClient) {
-    console.log('kk')
     this.user = new User ("",0,"","",new Date(), new Date(),"",0,0)
+    this.repository=new Repository ("", "","",new Date(),"","","",new Date())
   }
 
   // for github profile
@@ -72,16 +73,23 @@ export class GithubServiceService {
    // for github repos
 
    getRepos (searchQuery: string) {
+
+    interface ApiResponse {
+        repository:[];
+  }
      let dataUrl = `https://api.github.com/search/repositories?q=${searchQuery}`
 
      let myPromise = new Promise((resolve:any,reject:any)=>{
-      this.http.get(dataUrl).toPromise().then((response:any)=>{
+      this.http.get<ApiResponse>(dataUrl).toPromise().then((response:any)=>{
        
+        this.repo_items=response;
+        console.log(this.repo_items)
+
+        
 
         resolve()
       },
       error=>{
-        
 
         reject(error)
       })
