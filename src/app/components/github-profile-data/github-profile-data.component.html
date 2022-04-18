@@ -1,3 +1,21 @@
 <!-- <p>github-profile-data works!</p>
 <pre>{{this.user | json}}</pre>  -->
 
+<div>
+    
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">
+                number of repos:{{this.user.public_repos}}
+            </li>
+
+            <li class="list-group-item">
+                date created: {{this.user.created_at|date}}
+            </li>
+
+            <li class="list-group-item">
+                date updated: {{this.user.updated_at|date}}
+            </li>
+        </ul>
+    </div>
+</div>
