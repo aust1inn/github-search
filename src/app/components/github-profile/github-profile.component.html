@@ -1,5 +1,5 @@
 
-<div class="container-fluid mt-3">
+<div *ngIf="this.user" class="container-fluid mt-3">
     <div class="row">
         <div class="col-md-3">
             <app-github-profile-card [user]="user"></app-github-profile-card>
