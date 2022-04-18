@@ -23,7 +23,7 @@ export class GithubServiceService {
   
   constructor (private http:HttpClient) {
     console.log('kk')
-    this.user = new User ("",0,"","",new Date(), new Date(),"")
+    this.user = new User ("",0,"","",new Date(), new Date(),"",0,0)
   }
 
   // for github profile
@@ -38,6 +38,8 @@ export class GithubServiceService {
       created_at:Date,
       updated_at:Date,
       html_url: string,
+      followers:number,
+      following:number,
   }
     let dataUrl = `https://api.github.com/users/${searchQuery}`;
 
@@ -51,6 +53,8 @@ export class GithubServiceService {
       this.user.created_at=data.created_at;
       this.user.updated_at=data.updated_at;
       this.user.html_url=data.html_url;
+      this.user.followers=data.followers;
+      this.user.following=data.following
 
         resolve()
       },
