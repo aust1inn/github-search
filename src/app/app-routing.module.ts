@@ -1,3 +1,4 @@
+import { GithubAppComponent } from './components/github-app/github-app.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -6,9 +7,9 @@ import { GithubProfileComponent } from './components/github-profile/github-profi
 
 const routes: Routes = [
 
-  {path:'users' ,component: GithubProfileComponent},
+  {path:'users' ,component: GithubAppComponent},
   {path:'repos' ,component:GithubReposComponent},
-  // {path: '', redirectTo: '/users', pathMatch: 'full'},
+  {path: '', redirectTo: '/users', pathMatch: 'full'},
 
 ];
 

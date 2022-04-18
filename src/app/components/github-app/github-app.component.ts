@@ -16,7 +16,9 @@ export class GithubAppComponent implements OnInit {
   user!:User
   githubRepos:Repository [] =[];
 
-  constructor(private githubService:GithubServiceService ) { }
+  constructor(private githubService:GithubServiceService ) {
+
+   }
 
   searchUser () {
     
@@ -24,11 +26,12 @@ export class GithubAppComponent implements OnInit {
     this.githubService.getProfile(this.namePassed);
     this.user = this.githubService.user
 
-    this.githubService.getRepos(this.namePassed);
     // this.githubRepos=this.githubService.repo_items;
     // this.githubRepos.push(this.githubService.repo_items)
 
     // console.log(this.githubRepos)
+    this.githubService.getRepos(this.namePassed);
+
     console.log(this.githubService.repo_items)
   }
 
