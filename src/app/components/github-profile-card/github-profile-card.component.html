@@ -3,7 +3,9 @@
 <div class="card">
     <img alt="img" [src]="this.user.avatar_url" class="img-fluid">
     <div class="card-body">
+        <h3>{{this.user.login}}</h3>
         <p>{{this.user.bio}}</p>
+        <a [href]="this.user.html_url" class="btn btn-primary" target="blank">check profile</a>
     </div>
 </div>
 
