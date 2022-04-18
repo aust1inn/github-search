@@ -1,6 +1,57 @@
 # GithubSearch
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+An application where users can search for github profiles and repositories by searching the github username on the searchbar
+# Table of Contents
+  -Description
+  
+  -Demo
+  
+  -Technologies Used
+  
+  -Development
+  
+  -Requirements
+  
+  -Setup Instructions
+  
+  -License
+
+
+## Demo
+Below is a working of a live demo
+
+https://aust1inn.github.io/github-search/
+
+## Technologies Used
+An HTML file was used to create the website
+
+A CSS file was used to style and polish the website
+## Development
+Want to contribute? Great!
+
+To fix a bug or enhance an existing module, follow these steps:
+
+  -Fork the repo
+
+  -Create a new branch (git checkout -b improve-feature)
+
+  -Make the appropriate changes in the files
+
+  -Add changes to reflect the changes made
+
+  -Commit your changes (git commit -am 'Improve feature')
+
+  -Push to the branch (git push origin improve-feature)
+
+  -Create a Pull Request
+  
+  ## Requirements
+  -Either a phone, laptop or a computer
+  
+  -A stable access to the internet
+  
+
+
 
 ## Development server
 
@@ -25,3 +76,29 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## License
+Copyright (c) [2022] [Austin Omondi]
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in all
+ copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+ 
+## Authors Info
+Austine Otieno Omondi
+
+email at austinotieno364@gmail.com
