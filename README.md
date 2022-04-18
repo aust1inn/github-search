@@ -23,9 +23,8 @@ Below is a working of a live demo
 https://aust1inn.github.io/github-search/
 
 ## Technologies Used
-An HTML file was used to create the website
+Angular 13 
 
-A CSS file was used to style and polish the website
 ## Development
 Want to contribute? Great!
 
