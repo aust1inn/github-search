@@ -85,8 +85,6 @@ export class GithubServiceService {
         this.repo_items=response;
         console.log(this.repo_items)
 
-        
-
         resolve()
       },
       error=>{

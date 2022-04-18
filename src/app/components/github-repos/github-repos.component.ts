@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Repository } from 'src/app/models/repository';
 
 @Component({
   selector: 'app-github-repos',
@@ -7,7 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class GithubReposComponent implements OnInit {
 
-  @Input() githubRepos!:any[]
+  @Input() githubRepos:Repository [] =[];
+
   constructor() { }
 
   ngOnInit(): void {

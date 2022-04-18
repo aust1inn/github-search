@@ -14,7 +14,7 @@ export class GithubAppComponent implements OnInit {
 
   public namePassed!:string;
   user!:User
-  githubRepos!:any
+  githubRepos:Repository [] =[];
 
   constructor(private githubService:GithubServiceService ) { }
 
@@ -25,10 +25,11 @@ export class GithubAppComponent implements OnInit {
     this.user = this.githubService.user
 
     this.githubService.getRepos(this.namePassed);
-    this.githubRepos=this.githubService.repo_items;
+    // this.githubRepos=this.githubService.repo_items;
+    // this.githubRepos.push(this.githubService.repo_items)
 
-    console.log(this.githubRepos)
-    console.log(this.user)
+    // console.log(this.githubRepos)
+    console.log(this.githubService.repo_items)
   }
 
   ngOnInit(): void {
