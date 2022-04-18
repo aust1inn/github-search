@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-github-profile-data',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GithubProfileDataComponent implements OnInit {
 
+  @Input() user!:User
   constructor() { }
 
   ngOnInit(): void {

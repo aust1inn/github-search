@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { GithubServiceService } from 'src/app/services/github-service.service';
+import { Component, Input, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user';
 
 @Component({
@@ -9,14 +8,11 @@ import { User } from 'src/app/models/user';
 })
 export class GithubProfileComponent implements OnInit {
 
-  
+  @Input() user!:User
 
   constructor() {
    }
-
    
-  
-
 
   ngOnInit(): void {
   }

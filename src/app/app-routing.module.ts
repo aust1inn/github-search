@@ -8,7 +8,7 @@ const routes: Routes = [
 
   {path:'users' ,component: GithubProfileComponent},
   {path:'repos' ,component:GithubReposComponent},
-  {path: '', redirectTo: '/users', pathMatch: 'full'},
+  // {path: '', redirectTo: '/users', pathMatch: 'full'},
 
 ];
 

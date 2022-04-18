@@ -10,8 +10,8 @@
                     <form class="form-inline" (submit)="searchUser()"  #gitForm='ngForm' name="gitForm">
                         <div class="form-group ">
                             <input type="search" [(ngModel)]='namePassed' name="user" class="form-control" placeholder="github user">
-                            {{namePassed}}
-                            {{githubProfile}}
+                            
+                            
 
                         </div>
                         <div>
@@ -28,8 +28,19 @@
 
     <div class="row">
         <div class="col">
-            {{githubProfile}}
+            <app-github-profile [user]="user">
+
+                 
+
+
+            </app-github-profile>
         </div>
     </div>
+        <div class="row">
+            <div class="col">
+                <app-github-repos>
 
+                </app-github-repos>
+            </div>
+        </div>
 </div>

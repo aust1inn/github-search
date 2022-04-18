@@ -19,6 +19,7 @@ import { observable } from 'rxjs';
 export class GithubServiceService {
 
   user!:User
+  repos!:Repository[]
   
   constructor (private http:HttpClient) {
     console.log('kk')
@@ -38,7 +39,7 @@ export class GithubServiceService {
       updated_at:Date,
       html_url: string,
   }
-    let dataUrl = `https://api.github.com/users/${searchQuery}?access_token=${environment.githubApi}`;
+    let dataUrl = `https://api.github.com/users/${searchQuery}`;
 
 
     let promise = new Promise((resolve:any,reject:any)=>{
@@ -61,52 +62,29 @@ export class GithubServiceService {
     })
     return promise
 
-    
-
-
-
-
-
-
-
-
-
-
-  //   return this.http.get<any>(dataUrl).pipe(
-
-  //     // retry(count: 1),
-  //     catchError(this.handleErrors)
-  //   );
-  // }
-
-  // // for github repos
-
-  // public getRepos(searchQuery: string){
-  //   let dataUrl = `https://api.github.com/users/${searchQuery}/repos?access_token=${environment.githubApi}`;
-
-  //   return this.http.get<any[]>(dataUrl).pipe(
-
-  //     // retry(count: 1),
-  //     catchError(this.handleErrors)
-  //   );
-  // }
-
-  // public handleErrors (error:HttpErrorResponse) {
-  //   let errorMessage:string;
-  //   if (error.error instanceof ErrorEvent) {
-  //     // client side error
-  //     errorMessage = `MESSAGE: ${error.error.message}`
-  //   }
-        
-  //     else {
-  //     // server side error
-  //      errorMessage =`STATUS: ${error.status} MESSAGE : ${error.message}` 
-  //   }
-  //     return throwError(errorMessage);
+      
    }
 
-   
+   // for github repos
 
+   getRepos (searchQuery: string) {
+     let dataUrl = `https://api.github.com/search/repositories?q=${searchQuery}`
+
+     let myPromise = new Promise((resolve:any,reject:any)=>{
+      this.http.get(dataUrl).toPromise().then((response:any)=>{
+       
+
+        resolve()
+      },
+      error=>{
+        
+
+        reject(error)
+      })
+    })
+    return myPromise
+
+   }
   }
   
 
