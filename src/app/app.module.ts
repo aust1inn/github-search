@@ -12,6 +12,7 @@ import { GithubAppComponent } from './components/github-app/github-app.component
 import { GithubProfileDataComponent } from './components/github-profile-data/github-profile-data.component';
 import { GithubProfileCardComponent } from './components/github-profile-card/github-profile-card.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { DatePipe } from './pipes/date.pipe';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { HighlightDirective } from './directives/highlight.directive';
     GithubProfileDataComponent,
     GithubProfileCardComponent,
     HighlightDirective,
+    DatePipe,
     
     
   ],
