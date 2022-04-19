@@ -20,8 +20,7 @@ An application where users can search for github profiles and repositories by se
 ## Demo
 Below is a working of a live demo
 
-https://aust1inn.github.io/github-search/
-
+https://tiny-praline-a62407.netlify.app/
 ## Technologies Used
 Angular 13 
 
