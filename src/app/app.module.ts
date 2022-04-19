@@ -11,6 +11,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { GithubAppComponent } from './components/github-app/github-app.component';
 import { GithubProfileDataComponent } from './components/github-profile-data/github-profile-data.component';
 import { GithubProfileCardComponent } from './components/github-profile-card/github-profile-card.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { GithubProfileCardComponent } from './components/github-profile-card/git
     GithubAppComponent,
     GithubProfileDataComponent,
     GithubProfileCardComponent,
+    HighlightDirective,
     
     
   ],
